@@ -18,6 +18,27 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+$dark:                            #111 !default;
+$base-background-color:           #111 !default;
+$base-color:                      #FFF !default;
+$menu-bg:                         #111 !default;
+$menu-side-shadow:                -1px 0px 20px rgba(0, 0, 0, 0.8), 1px 0px 2px rgba(0,0,0,0.2) !default;
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+.item-complex .item-content, .item-radio .item-content {
+  background-color:#111;
+  color:#FFF;
+  &.activated {
+    background-color:#111;
+  }
+}
+.item {
+  border-color:#000;
+  background:#111;
+  input, h2, p {
+    color:#FFF;
+  }
+}
 
