@@ -5,6 +5,9 @@
                 <i class="icon ion-search placeholder-icon"></i>
                 <input type="search" placeholder="Search" ng-model="searchQuery">
             </label>
+
+            <ion-spinner ng-show="{{loadingSpinner === 'true'}}" class="center"></ion-spinner>
+
             <ion-item class="item-thumbnail-left" ng-repeat="video in videos">
                 <img ng-src="{{video.snippet.thumbnails.default.url}}">
                 <h2>{{video.snippet.title}}</h2>
