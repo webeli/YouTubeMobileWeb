@@ -7,13 +7,13 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-  
 
-      .state('menu.search', {
-    url: '/page1',
+
+
+  .state('menu.search', {
+    url: '/search',
     views: {
-      'side-menu21': {
+      'main': {
         templateUrl: 'templates/search.html',
         controller: 'searchCtrl'
       }
@@ -21,9 +21,9 @@ angular.module('app.routes', [])
   })
 
   .state('menu.myMusic', {
-    url: '/page2',
+    url: '/mymusic',
     views: {
-      'side-menu21': {
+      'main': {
         templateUrl: 'templates/myMusic.html',
         controller: 'myMusicCtrl'
       }
@@ -31,9 +31,9 @@ angular.module('app.routes', [])
   })
 
   .state('menu.explore', {
-    url: '/page3',
+    url: '/explore',
     views: {
-      'side-menu21': {
+      'main': {
         templateUrl: 'templates/explore.html',
         controller: 'exploreCtrl'
       }
@@ -41,13 +41,13 @@ angular.module('app.routes', [])
   })
 
   .state('menu', {
-    url: '/side-menu21',
+    url: '/main',
     templateUrl: 'templates/menu.html',
     abstract:true
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page1')
+$urlRouterProvider.otherwise('/main/search')
 
-  
+
 
 });
